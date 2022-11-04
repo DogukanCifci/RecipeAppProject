@@ -1,6 +1,6 @@
 import React from "react";
 
-import { Hamburger, Logo, Menu, MenuLink, Nav } from "./NavbarStyles";
+import { Logo, Menu, MenuLink, Nav } from "./NavbarStyles";
 
 const Navbar = () => {
   return (
@@ -10,8 +10,10 @@ const Navbar = () => {
         <span>Recipe</span>
       </Logo>
       <Menu>
-        <MenuLink to="/home">HOME</MenuLink>
         <MenuLink to="/about">ABOUT</MenuLink>
+
+        <a href="https://github.com/DogukanCifci">GITHUB</a>
+
         <MenuLink to="/">LOGIN</MenuLink>
       </Menu>
     </Nav>

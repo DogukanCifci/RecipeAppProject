@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import {
   FormContainer,
   Header,
@@ -9,14 +10,20 @@ import {
   StyledInput,
 } from "./LoginStyles";
 import mealSvg from "../../assets/meal.svg";
+
 const Login = () => {
   const [nickName, setNickname] = useState();
   console.log(nickName);
+  const navigate = useNavigate();
+  const submitFunction = (e) => {
+    e.preventDefault();
+    navigate("/home");
+  };
   return (
     <LoginContainer>
-      <FormContainer>
+      <FormContainer onSubmit={submitFunction}>
         <StyledImg src={mealSvg} />
-        <Header>{"<Clarusway/>"}Recipe</Header>
+        <Header>{"<Dogukan/>"}Recipe</Header>
         {/* login sayfasındaki yuvarlak olayın içindeki yazı (Header) */}
 
         <StyledForm>
