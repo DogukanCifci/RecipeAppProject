@@ -1,4 +1,4 @@
-import React,{useState} from "react";
+import React, { useState } from "react";
 import {
   FormContainer,
   Header,
@@ -10,12 +10,8 @@ import {
 } from "./LoginStyles";
 import mealSvg from "../../assets/meal.svg";
 const Login = () => {
-const[nickName, setNickname]=useState();
-
-
-
-
-
+  const [nickName, setNickname] = useState();
+  console.log(nickName);
   return (
     <LoginContainer>
       <FormContainer>
@@ -23,10 +19,14 @@ const[nickName, setNickname]=useState();
         <Header>{"<Clarusway/>"}Recipe</Header>
         {/* login sayfasındaki yuvarlak olayın içindeki yazı (Header) */}
 
-        <StyledForm  >
+        <StyledForm>
           {/* 3 kutunun olduğu form  */}
-          <StyledInput type="text" placeholder="username" required onChange={(e)=>setNickname(e.target.value)}/>
-
+          <StyledInput
+            type="text"
+            placeholder="username"
+            required
+            onChange={(e) => setNickname(e.target.value)}
+          />
 
           <StyledInput type="password" placeholder="password" required />
           <StyledButton type="submit">Login</StyledButton>
