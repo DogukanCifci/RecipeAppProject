@@ -10,19 +10,21 @@ export const DetailContainer = styled.div`
   min-height: calc(100vh - 75px);
   /* height: fit-content; */
   padding: 5px;
+  text-align: center;
 `;
 
 export const DetailPart = styled.div`
   /* verilerin , içindekiler,resim ve Nutrients in yazdığı yer */
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
   flex-wrap: wrap;
   align-items: center;
   margin: 1rem;
-  border: 1px solid white;
+  width: 300px;
+
   border-radius: 5px;
-  background-color: pink;
+  background-color: white;
   /* background-color: #e1f1dd; */
   /* height: calc(100vh - 300px); */
   @media (max-width: 1250px) {
@@ -35,32 +37,28 @@ export const DetailPart = styled.div`
 export const ImgContainer = styled.div`
   /* resmin div i */
   background-color: green;
-
-  border: 1px solid #00adb5;
+  border: 1px solid black;
   padding: 10px;
   border-radius: 3px;
   margin: 2rem;
+  display: flex;
+  justify-content: space-between;
+
   img {
+    height: 300px;
     border-radius: 10px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
   }
 `;
 
 export const HeaderContainer = styled.div`
   /* üstteki başlık ve kadın resmi */
-  background-color: darkgray;
-
+  background-color: white;
   display: flex;
   justify-content: space-evenly;
   margin: 25px;
   font-size: 3rem;
   h1 {
     font-size: 3rem;
-  }
-  img {
-    width: 200px;
   }
 `;
 
@@ -69,7 +67,7 @@ export const IngredContainer = styled.div`
   width: 400px;
   font-size: 1.4rem;
   margin: 2rem;
-  background-color: gray;
+  background-color: white;
 `;
 
 export const OtherPart = styled.div`

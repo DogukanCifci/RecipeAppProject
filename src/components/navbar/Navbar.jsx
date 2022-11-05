@@ -2,11 +2,12 @@ import React from "react";
 
 import { Logo, Menu, MenuLink, Nav } from "./NavbarStyles";
 
-const Navbar = () => {
+const Navbar = ({ food, setFood }) => {
   return (
     <Nav>
-      <Logo to="/home">
+      <Logo to="/home" onClick={() => setFood("")}>
         {"<Dogukan />"}
+
         <span>Recipe</span>
       </Logo>
       <Menu>
