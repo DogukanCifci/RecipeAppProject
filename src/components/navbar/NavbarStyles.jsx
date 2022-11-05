@@ -13,6 +13,7 @@ export const Nav = styled.div`
   border-radius: 0 0 10px 10px;
   padding: 10px;
   font-size: 2rem;
+  height: 10vh;
   /* background: #e1f1dd; */
 `;
 

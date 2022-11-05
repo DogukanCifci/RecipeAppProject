@@ -8,9 +8,10 @@
   border: 0.5px solid #9d4d8c;
   border-radius: 5px;
   text-align: center;
-  height: 55px;
+  height: 10vh;
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 
 .brand {

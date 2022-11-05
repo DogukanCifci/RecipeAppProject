@@ -1,6 +1,5 @@
 import React from "react";
-import Footer from "../../components/footer/Footer";
-import Navbar from "../../components/navbar/Navbar";
+
 import {
   AboutArticle,
   AboutContainer,
@@ -13,7 +12,6 @@ import CodingImage from "../../assets/coding.svg";
 const About = () => {
   return (
     <div>
-      <Navbar />
       <AboutContainer>
         <AboutImage src={CodingImage} />
         <AboutHeader>
@@ -39,7 +37,6 @@ const About = () => {
           </Text>
         </AboutArticle>
       </AboutContainer>
-      <Footer />
     </div>
   );
 };

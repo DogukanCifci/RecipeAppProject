@@ -5,9 +5,10 @@ export const Header = styled.h1`
   text-align: center;
 `;
 export const ContainerInput = styled.div`
-  padding: 20px 0;
+  padding: 20px 0 0 0;
   background-color: purple;
   display: flex;
+
   flex-direction: column;
   align-items: center;
 `;
@@ -42,10 +43,11 @@ export const RecipeCardsKapsayici = styled.div`
   justify-content: center;
   align-items: center;
   display: flex;
-  min-height: 80vh;
+  min-height: 60vh;
   flex-wrap: wrap;
   width: 100%;
   gap: 15px;
+  padding-bottom: 20px;
 `;
 
 export const RecipeCards = styled.div`

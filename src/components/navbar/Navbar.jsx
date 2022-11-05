@@ -6,7 +6,7 @@ const Navbar = () => {
   return (
     <Nav>
       <Logo to="/home">
-        {"<Clarusway />"}
+        {"<Dogukan />"}
         <span>Recipe</span>
       </Logo>
       <Menu>
