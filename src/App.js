@@ -13,9 +13,8 @@ const App = () => {
   const [foodList, setFoodList] = useState([]);
   const [food, setFood] = useState("");
   const [ögün, setOgün] = useState("breakfast");
-  const düzenle = () => {
-    console.log("Merhaba ben calisiyorum!");
-  };
+  const [login, setLogin] = useState("LOGIN");
+
   return (
     <>
       <BrowserRouter>
@@ -23,7 +22,8 @@ const App = () => {
           setFood={setFood}
           setFoodList={setFoodList}
           setOgün={setOgün}
-          düzenle={düzenle}
+          login={login}
+          setLogin={setLogin}
         />
         <Routes>
           <Route
@@ -40,7 +40,7 @@ const App = () => {
             }
           />
           <Route path="/about" element={<About />} />
-          <Route exact path="/" element={<Login />} />
+          <Route exact path="/" element={<Login setLogin={setLogin} />} />
 
           <Route path="/details" element={<Details />} />
         </Routes>

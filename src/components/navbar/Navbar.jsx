@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Hamburger, Logo, Menu, MenuLink, Nav } from "./NavbarStyles";
 import { GiHamburgerMenu } from "react-icons/gi";
 
-const Navbar = ({ setOgün, setFood, setFoodList, düzenle }) => {
+const Navbar = ({ login, setLogin }) => {
   const [HamburgerCheck, setHamburgerCheck] = useState(true);
   //console.log(HamburgerCheck);
 
@@ -20,7 +20,7 @@ const Navbar = ({ setOgün, setFood, setFoodList, düzenle }) => {
       <Menu>
         <MenuLink to="/about">ABOUT</MenuLink>
         <a href="https://github.com/DogukanCifci">GITHUB</a>
-        <MenuLink to="/">LOGIN</MenuLink>
+        <MenuLink to="/">{login}</MenuLink>
       </Menu>
     </Nav>
   );

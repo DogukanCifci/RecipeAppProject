@@ -9,6 +9,7 @@ import {
   Text,
 } from "./AboutStyles";
 import CodingImage from "../../assets/coding.svg";
+
 const About = () => {
   return (
     <div>

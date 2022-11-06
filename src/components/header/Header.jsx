@@ -20,6 +20,7 @@ const MyHeader = ({
   foodList,
   setInputIc,
   InputIc,
+  currentUrl,
 }) => {
   return (
     <div>

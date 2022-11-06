@@ -21,8 +21,12 @@ const Home = ({
   // const ögünTypes = ["Breakfast", "Lunch", "Dinner", "Snack", "Teatime"];
 
   const getData = async () => {
-    const { data } = await axios.get(url);
-    setFoodList(data.hits);
+    if (food === "") {
+      return;
+    } else {
+      const { data } = await axios.get(url);
+      setFoodList(data.hits);
+    }
   };
   const [inputIc, setInputIc] = useState("");
   return (

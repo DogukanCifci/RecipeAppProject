@@ -11,14 +11,16 @@ import {
 } from "./LoginStyles";
 import mealSvg from "../../assets/meal.svg";
 
-const Login = () => {
+const Login = ({ setLogin }) => {
   const [nickName, setNickname] = useState();
   console.log(nickName);
   const navigate = useNavigate();
   const submitFunction = (e) => {
     e.preventDefault();
     navigate("/home");
+    setLogin("LOGOUT");
   };
+
   return (
     <LoginContainer>
       <FormContainer onSubmit={submitFunction}>
