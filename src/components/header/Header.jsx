@@ -11,7 +11,16 @@ import {
 } from "./HeaderStyles";
 //import { FormContainer, HeaderContainer, MainHeader,FoodInput, Button, Select } from './HeaderStyles'
 
-const MyHeader = ({ setOgün, ögün, food, setFood, getData, foodList }) => {
+const MyHeader = ({
+  setOgün,
+  ögün,
+  food,
+  setFood,
+  getData,
+  foodList,
+  setInputIc,
+  InputIc,
+}) => {
   return (
     <div>
       <ContainerInput>
@@ -20,8 +29,10 @@ const MyHeader = ({ setOgün, ögün, food, setFood, getData, foodList }) => {
         </div>
         <AltKapsayici>
           <Input
+            id="searchInput"
             placeholder="Search"
             onChange={(e) => setFood(e.target.value)}
+            onKeyDown={(e) => (e.keyCode === 13 ? getData() : undefined)}
           />
           <button
             width={300}

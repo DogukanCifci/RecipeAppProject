@@ -1,9 +1,17 @@
 // const APP_ID = "4e9f05eb";
 import axios from "axios";
-
+import { useState } from "react";
 import MyHeader from "../../components/header/Header";
 
-const Home = ({ ögün, setOgün, food, setFood, foodList, setFoodList }) => {
+const Home = ({
+  ögün,
+  setOgün,
+  food,
+  setFood,
+  foodList,
+  setFoodList,
+  düzenle,
+}) => {
   const APP_KEY = "9b904d703fa0d46a88ce1ac63f29f498";
   const APP_ID = "4e9f05eb";
 
@@ -16,16 +24,19 @@ const Home = ({ ögün, setOgün, food, setFood, foodList, setFoodList }) => {
     const { data } = await axios.get(url);
     setFoodList(data.hits);
   };
-
+  const [inputIc, setInputIc] = useState("");
   return (
     <div>
       <MyHeader
+        düzenle={düzenle}
         ögün={ögün}
         setOgün={setOgün}
         food={food}
         setFood={setFood}
         getData={getData}
         foodList={foodList}
+        setInputIc={setInputIc}
+        inputIc={inputIc}
       />
     </div>
   );

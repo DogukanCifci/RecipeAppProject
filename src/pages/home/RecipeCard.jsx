@@ -3,7 +3,7 @@ import { Button, RecipeCards, RecipeHeader, RecipeImage } from "./HomeStyles";
 import { useNavigate } from "react-router-dom";
 const RecipeCard = ({ element, index }) => {
   let navigate = useNavigate();
-  console.log(element);
+  //console.log(element);
   const detayaGit = () => {
     navigate("/details", { state: { element } });
   };
