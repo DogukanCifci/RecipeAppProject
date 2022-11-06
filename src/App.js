@@ -6,7 +6,7 @@ import Details from "./pages/details/Details.jsx";
 import About from "./pages/about/About";
 import Home from "./pages/home/Home";
 import Login from "./pages/login/Login";
-
+import "./index.css";
 import { useState } from "react";
 
 const App = () => {

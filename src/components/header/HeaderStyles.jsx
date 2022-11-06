@@ -1,10 +1,10 @@
 import styled from "styled-components";
 export const ContainerInput = styled.div`
   padding: 20px 0 0 0;
-  background-color: purple;
+  background-color: #189cb0;
   display: flex;
-
   flex-direction: column;
+
   align-items: center;
 `;
 
@@ -21,12 +21,12 @@ export const AltKapsayici = styled.div`
   border: 1px solid white;
   border-radius: 10px;
   width: 500px;
-  background-color: red;
+  background-color: white;
   padding: 5px 10px;
 `;
 
 export const Select = styled.select`
-  background-color: white;
+  background-color: #9fc131;
   width: 120px;
 `;
 
@@ -37,6 +37,7 @@ export const Input = styled.input`
 
 export const RecipeCardsKapsayici = styled.div`
   background-color: white;
+  border-radius: 30px 30px 0 0;
   padding-top: 30px;
   margin-top: 32px;
   text-align: center;

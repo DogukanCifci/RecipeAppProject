@@ -24,7 +24,7 @@ export const DetailPart = styled.div`
   width: 300px;
 
   border-radius: 5px;
-  background-color: white;
+  color: wheat;
   /* background-color: #e1f1dd; */
   /* height: calc(100vh - 300px); */
   @media (max-width: 1250px) {
@@ -36,13 +36,14 @@ export const DetailPart = styled.div`
 
 export const ImgContainer = styled.div`
   /* resmin div i */
-  background-color: green;
-  border: 1px solid black;
+  font-size: 1.4rem;
+  border: 2px solid wheat;
   padding: 10px;
   border-radius: 3px;
   margin: 2rem;
   display: flex;
   justify-content: space-between;
+  align-items: center;
 
   img {
     height: 300px;
@@ -52,7 +53,7 @@ export const ImgContainer = styled.div`
 
 export const HeaderContainer = styled.div`
   /* üstteki başlık ve kadın resmi */
-  background-color: white;
+  color: wheat;
   display: flex;
   justify-content: space-evenly;
   margin: 25px;
@@ -67,7 +68,9 @@ export const IngredContainer = styled.div`
   width: 400px;
   font-size: 1.4rem;
   margin: 2rem;
-  background-color: white;
+
+  border-radius: 10px;
+  color: wheat;
 `;
 
 export const OtherPart = styled.div`

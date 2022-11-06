@@ -1,5 +1,6 @@
 import React from "react";
 import RecipeCard from "../../pages/home/RecipeCard";
+import Man from "../../assets/home.svg";
 import {
   AltKapsayici,
   ContainerInput,
@@ -24,7 +25,11 @@ const MyHeader = ({ setOgün, ögün, food, setFood, getData, foodList }) => {
           />
           <button
             width={300}
-            style={{ backgroundColor: "lightgreen", width: "80px" }}
+            style={{
+              backgroundColor: "#153462",
+              color: "#F6F6C9",
+              width: "80px",
+            }}
             onClick={getData}
           >
             Search
@@ -36,10 +41,15 @@ const MyHeader = ({ setOgün, ögün, food, setFood, getData, foodList }) => {
             <option value="snack">Snack</option>
           </Select>
         </AltKapsayici>
+
         <RecipeCardsKapsayici>
-          {foodList.map((element, index) => (
-            <RecipeCard key={index} element={element.recipe} />
-          ))}
+          {foodList.length > 0 ? (
+            foodList.map((element, index) => (
+              <RecipeCard key={index} element={element.recipe} />
+            ))
+          ) : (
+            <img width={500} src={Man} alt="" />
+          )}
         </RecipeCardsKapsayici>
       </ContainerInput>
     </div>

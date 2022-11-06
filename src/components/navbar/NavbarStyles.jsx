@@ -9,11 +9,12 @@ export const Nav = styled.div`
   align-items: center; // dikeyde ortala
   flex-wrap: wrap;
   /* Varsayılan olarak esnek öğeler tek bir satıra sığmaya çalışırlar. Gerektiğinde birden fazla satıra yaymak için bu özelliği kullanabilirsiniz */
-  background: salmon;
-  border-radius: 0 0 10px 10px;
+  background: rgba(33, 16, 107, 0.864);
+
   padding: 10px;
   font-size: 2rem;
-  height: 10vh;
+  height: 100px;
+
   /* background: #e1f1dd; */
 `;
 
@@ -58,7 +59,8 @@ export const Menu = styled.div`
     flex-direction: column;
     width: 100%;
     /* props olarak, osman=true geldi mesela */
-    max-height: ${({ osman }) => (osman ? "300px" : "0")};
+    max-height: ${({ setHamburgerCheck }) =>
+      setHamburgerCheck ? "300px" : "0"};
     /* max-height:300px; */
     /* 3 çizgiye ilk tıklandığında 300 px açılsın, sonraki tıklamada kapansın */
     /* max-height:300px yazarsak hep açık olur */
@@ -70,7 +72,7 @@ export const Menu = styled.div`
     text-align: center;
     text-decoration: none;
     /* kelimelerin altı çizili olmasın */
-    color: #02475e;
+    color: white;
 
     transition: all 0.3s ease-in;
     font-size: 2rem;
@@ -83,14 +85,14 @@ export const Menu = styled.div`
       /* hamburger meydana çıktığında 
     /* ekran küçülünce alttaki stiller olsun */
       border: 1px solid #00adb5;
-      border-radius: 10px;
+
       width: 91%;
     }
   }
 `;
 export const Logo = styled(Link)`
   padding: 1rem 0;
-  color: #393e46;
+  color: white;
   text-decoration: none;
   font-weight: 800;
   font-size: 2rem;
@@ -113,5 +115,10 @@ export const Hamburger = styled.div`
 
   @media (max-width: 768px) {
     display: flex;
+    margin-bottom: 10px;
+    margin-right: 10px;
+    align-items: flex-start;
+    justify-content: center;
+    vertical-align: middle;
   }
 `;
