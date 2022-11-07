@@ -3,21 +3,24 @@ import { Hamburger, Logo, Menu, MenuLink, Nav } from "./NavbarStyles";
 import { GiHamburgerMenu } from "react-icons/gi";
 
 const Navbar = ({ login, setLogin }) => {
-  const [HamburgerCheck, setHamburgerCheck] = useState(true);
-  //console.log(HamburgerCheck);
+  const [hamburgerCheck, setHamburgerCheck] = useState(true);
+  console.log(hamburgerCheck);
 
   return (
     <Nav>
-      <Logo to="/home">
+      <Logo to="/home" onClick={() => setHamburgerCheck(true)}>
         {"<Dogukan />"}
 
         <span>Recipe</span>
       </Logo>
-      <Hamburger HamburgerCheck={HamburgerCheck}>
-        <GiHamburgerMenu onClick={() => setHamburgerCheck(!HamburgerCheck)} />
+      <Hamburger onClick={() => setHamburgerCheck(!hamburgerCheck)}>
+        <GiHamburgerMenu />
       </Hamburger>
 
-      <Menu>
+      <Menu
+        hamburgerCheck={hamburgerCheck}
+        onClick={() => setHamburgerCheck(true)}
+      >
         <MenuLink to="/about">ABOUT</MenuLink>
         <a href="https://github.com/DogukanCifci">GITHUB</a>
         <MenuLink to="/">{login}</MenuLink>

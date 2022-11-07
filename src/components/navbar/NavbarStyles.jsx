@@ -9,7 +9,7 @@ export const Nav = styled.div`
   align-items: center; // dikeyde ortala
   flex-wrap: wrap;
   /* Varsayılan olarak esnek öğeler tek bir satıra sığmaya çalışırlar. Gerektiğinde birden fazla satıra yaymak için bu özelliği kullanabilirsiniz */
-  background: rgba(33, 16, 107, 0.864);
+  background: rgba(33, 16, 107);
 
   padding: 10px;
   font-size: 2rem;
@@ -45,7 +45,6 @@ export const MenuLink = styled(Link)`
 `;
 export const Menu = styled.div`
   /* navbardaki 3 kelime about ...hepsini içine alan sarmalın (kutunun ) özellikleri*/
-
   display: flex;
   justify-content: center;
   align-items: center;
@@ -53,17 +52,18 @@ export const Menu = styled.div`
   /* içinde bulunduğu div in  stillerine göre ayarla kendini, bunu yazmazsak food app in altında kalacak */
   /* 3 kelime  açılınca üstteki özelliklerde olsun*/
   @media (max-width: 768px) {
-    overflow: hidden;
+    //display ve normal overflow ile olan REACT CLASSNOTES KISMINDA VAR ==!!!
     /* display: none; tamamen gizler, hamburger tıklanınca bile açılmaz */
     /* uzun yazı olurda taşarsa gizle (hamburgere dönüşünce)*/
     flex-direction: column;
     width: 100%;
+    height: 300px;
+    display: ${({ hamburgerCheck }) => (hamburgerCheck ? "none" : "flex")};
     /* props olarak, osman=true geldi mesela */
-    max-height: ${({ setHamburgerCheck }) =>
-      setHamburgerCheck ? "300px" : "0"};
     /* max-height:300px; */
     /* 3 çizgiye ilk tıklandığında 300 px açılsın, sonraki tıklamada kapansın */
     /* max-height:300px yazarsak hep açık olur */
+    background-color: rgba(33, 16, 107);
   }
 
   a {
