@@ -7,6 +7,11 @@ export const RecipeCards = styled.div`
   box-shadow: 10px 10px 10px black;
   border-radius: 15px;
   position: relative;
+  transition: all 0.3s ease-in-out;
+  &:hover {
+    transform: scale(0.99);
+    box-shadow: none;
+  }
 `;
 
 export const RecipeHeader = styled.h5`

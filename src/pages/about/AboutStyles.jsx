@@ -7,10 +7,11 @@ export const AboutContainer = styled.div`
   justify-content: center;
   padding-bottom: 40px;
   min-height: 80vh;
+  width: 100%;
 `;
 
 export const AboutImage = styled.img`
-  width: 300px;
+  width: 400px;
   height: 300px;
   margin: 0 auto;
 `;
@@ -25,11 +26,15 @@ export const AboutHeader = styled.h5`
   color: black;
   word-spacing: 7px;
   text-align: center;
+  font-size: 1.5rem;
+  @media (max-width: 726px) {
+    font-size: 1rem;
+  }
 `;
 
 export const AboutArticle = styled.div`
   border: 1px solid white;
-  width: 700px;
+  width: 80%;
   margin: 0 auto;
   background-color: #00939c;
   text-align: end;
@@ -38,6 +43,10 @@ export const AboutArticle = styled.div`
   color: black;
   line-height: 45px;
   word-spacing: 5px;
+  font-size: 1.5rem;
+  @media (max-width: 726px) {
+    font-size: 1rem;
+  }
 `;
 
 export const Text = styled.div`
